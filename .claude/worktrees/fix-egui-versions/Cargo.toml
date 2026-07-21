@@ -1,0 +1,18 @@
+[package]
+name = "gplot"
+version = "0.1.0"
+edition = "2024"
+description = "Quick xmgrace-style plotter for GROMACS .xvg and PLUMED COLVAR files"
+
+[[bin]]
+name = "gplot"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.35"
+egui = "0.35"
+egui_plot = "0.36"
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[profile.release]
+opt-level = 3
